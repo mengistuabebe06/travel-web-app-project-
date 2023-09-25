@@ -21,6 +21,7 @@ import calc
 
 
 urlpatterns = [
-    path('',include('calc.urls')),
+    # path('',include('calc.urls')),
+    path('',include('travello.urls')),
     path('admin/', admin.site.urls),
 ]
