@@ -64,9 +64,13 @@
                     >
                     <li><a href="inex.html">Home</a></li>
                     <li><a href="about.html">About us</a></li>
-                    <li><a href="accounts/register">Register</a></li>
-                    <li><a href="accounts/login">login</a></li>
+                    {% if user.is_authenticated %}
+                    <h2>{{user.first_name}}</h2>
                     <li><a href="accounts/logout">logout</a></li>
+                    {% else %}
+                    <li><a href="accounts/login">login</a></li>
+                    <li><a href="accounts/register">Register</a></li>
+                    {% endif %}
                     </ul>
                   </nav>
                   <div class="header_phone ml-auto">
