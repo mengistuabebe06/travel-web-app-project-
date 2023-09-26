@@ -35,8 +35,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{% static
-    'styles/main_styles.css' %}"
+      href="{% static 'styles/main_styles.css' %}"
     />
     <link
       rel="stylesheet"
@@ -63,11 +62,11 @@
                     <ul
                       class="d-flex flex-row align-items-start justify-content-start"
                     >
-                      <li class="active"><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About us</a></li>
-                      <li><a href="#">Services</a></li>
-                      <li><a href="news.html">News</a></li>
-                      <li><a href="contact.html">Contact</a></li>
+                    <li><a href="inex.html">Home</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="accounts/register">Register</a></li>
+                    <li><a href="accounts/login">login</a></li>
+                    <li><a href="accounts/logout">logout</a></li>
                     </ul>
                   </nav>
                   <div class="header_phone ml-auto">
@@ -128,9 +127,9 @@
           <ul>
             <li><a href="inex.html">Home</a></li>
             <li><a href="about.html">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="news.html">News</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="accounts/register">Register</a></li>
+            <li><a href="accounts/login">login</a></li>
+            <li><a href="accounts/logout">logout</a></li>
           </ul>
         </div>
         <div class="menu_social">
@@ -168,7 +167,7 @@
             <div class="owl-item">
               <div
                 class="background_image"
-                style="background-image: url(images/home_slider.jpg)"
+                style="{% static 'background-image: url(images/home_slider.jpg)' %}"
               ></div>
               <div class="home_slider_content_container">
                 <div class="container">
@@ -189,7 +188,7 @@
             <div class="owl-item">
               <div
                 class="background_image"
-                style="background-image: url(images/home_slider.jpg)"
+                style="{% static 'background-image: url(images/home_slider.jpg)' %}"
               ></div>
               <div class="home_slider_content_container">
                 <div class="container">
@@ -210,7 +209,7 @@
             <div class="owl-item">
               <div
                 class="background_image"
-                style="{% static "background-image: url(images/home_slider.jpg)" %}"
+                style="{% static 'background-image: url(images/home_slider.jpg)' %}"
               ></div>
               <div class="home_slider_content_container">
                 <div class="container">
@@ -385,7 +384,7 @@
                 {% for dest  in dests %}
                 <div class="destination item">
                   <div class="destination_image">
-                    <img src="{% static "images/destination_1.jpg" %}" alt="" />
+                    <img src="{{dest.img.url}}" alt="" />
                     {% if dest.offer %}
                     <div class="spec_offer text-center">
                       <a href="#">Special Offer</a>
